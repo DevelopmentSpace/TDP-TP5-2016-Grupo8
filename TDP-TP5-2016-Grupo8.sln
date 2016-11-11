@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EJ3", "EJ3\EJ3.csproj", "{6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EJ4", "EJ4\EJ4.csproj", "{4ECAF6A2-9BF5-484E-A007-5DC3EB7D7D44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EJ5", "EJ5\EJ5.csproj", "{B239AC64-C019-464C-B14C-6861D8FA9E29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4ECAF6A2-9BF5-484E-A007-5DC3EB7D7D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4ECAF6A2-9BF5-484E-A007-5DC3EB7D7D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4ECAF6A2-9BF5-484E-A007-5DC3EB7D7D44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B239AC64-C019-464C-B14C-6861D8FA9E29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B239AC64-C019-464C-B14C-6861D8FA9E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B239AC64-C019-464C-B14C-6861D8FA9E29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B239AC64-C019-464C-B14C-6861D8FA9E29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
