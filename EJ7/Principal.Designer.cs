@@ -106,7 +106,7 @@
             this.OpcionEncriptar.TabStop = true;
             this.OpcionEncriptar.Text = "Encriptar";
             this.OpcionEncriptar.UseVisualStyleBackColor = true;
-            this.OpcionEncriptar.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.OpcionEncriptar.CheckedChanged += new System.EventHandler(this.OpcionEncriptar_CheckedChanged);
             // 
             // OpcionDescencriptar
             // 
@@ -118,8 +118,9 @@
             this.OpcionDescencriptar.TabStop = true;
             this.OpcionDescencriptar.Text = "Descencriptar";
             this.OpcionDescencriptar.UseVisualStyleBackColor = true;
+            this.OpcionDescencriptar.CheckedChanged += new System.EventHandler(this.OpcionDescencriptar_CheckedChanged);
             // 
-            // Form1
+            // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -132,7 +133,7 @@
             this.Controls.Add(this.BotonCalcular);
             this.Controls.Add(this.textoSinEncriptar);
             this.Controls.Add(this.listaEncriptadores);
-            this.Name = "Form1";
+            this.Name = "Principal";
             this.Text = "Encriptador - Descencriptador";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

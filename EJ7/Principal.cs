@@ -48,14 +48,17 @@ namespace EJ7
             criptografia = new Criptografia();
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void OpcionEncriptar_CheckedChanged(object sender, EventArgs e)
         {
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void OpcionDescencriptar_CheckedChanged(object sender, EventArgs e)
+        {
         }
     }
 }

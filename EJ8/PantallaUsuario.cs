@@ -10,21 +10,16 @@ using System.Windows.Forms;
 
 namespace EJ8
 {
-    public partial class Principal : Form
+    public partial class PantallaUsuario : Form
     {
-        public Principal()
+        public PantallaUsuario()
         {
             InitializeComponent();
         }
 
-        private void ascendenteToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AceptarAccion_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-          
         }
     }
 }
