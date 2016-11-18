@@ -20,16 +20,23 @@ namespace EJ7
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Calcular_Click(object sender, EventArgs e)
         {
 
-            if (radioButton1.Checked)
+            if (OpcionEncriptar.Checked)
             {
-                richTextBox2.Text = criptografia.Encriptar(richTextBox1.Text, comboBox1.Text);
+                    textoEncriptado.Text = criptografia.Encriptar(textoSinEncriptar.Text, listaEncriptadores.Text);
             }
             else
             {
-                richTextBox1.Text = criptografia.Desencriptar(richTextBox2.Text, comboBox1.Text);
+                try
+                {
+                    textoSinEncriptar.Text = criptografia.Desencriptar(textoEncriptado.Text, listaEncriptadores.Text);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("El texto ingresado no se puede descencriptar.","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
            
