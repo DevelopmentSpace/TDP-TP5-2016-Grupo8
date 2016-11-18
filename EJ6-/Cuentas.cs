@@ -22,8 +22,8 @@ namespace EJ6_
         public Cuentas()
         {
 
-            iCuentaCorriente = new Cuenta(1000, 50);
-            iCajaAhorro = new Cuenta(500);
+            iCuentaCorriente = new Cuenta(0);
+            iCajaAhorro = new Cuenta(0);
 
         }
 
