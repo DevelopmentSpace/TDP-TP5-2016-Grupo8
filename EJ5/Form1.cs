@@ -21,19 +21,19 @@ namespace EJ5
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void calcular_click(object sender, EventArgs e)
         {
-            if (radioButton1.Checked)
+            if (opcionTriangulo.Checked)
             {
                 double x1,x2,x3,y1,y2,y3;
-                double.TryParse(textBox1.Text, out x1);
-                double.TryParse(textBox3.Text, out x2);
-                double.TryParse(textBox5.Text, out x3);
-                double.TryParse(textBox2.Text, out y1);
-                double.TryParse(textBox4.Text, out y2);
-                double.TryParse(textBox6.Text, out y3);
+                double.TryParse(punto1X.Text, out x1);
+                double.TryParse(punto2X.Text, out x2);
+                double.TryParse(punto3X.Text, out x3);
+                double.TryParse(punto1Y.Text, out y1);
+                double.TryParse(punto2YoRadio.Text, out y2);
+                double.TryParse(punto3Y.Text, out y3);
 
-                if (radioButton3.Checked)
+                if (opcionArea.Checked)
                 {
                    MessageBox.Show("El resultado es : " + calculadora.AreaTriangulo(x1,x2,x3,y1,y2,y3));
                 }
@@ -46,11 +46,11 @@ namespace EJ5
             else
             {
                 double x1, y1, radio;
-                double.TryParse(textBox1.Text, out x1);
-                double.TryParse(textBox2.Text, out y1);
-                double.TryParse(textBox4.Text, out radio);
+                double.TryParse(punto1X.Text, out x1);
+                double.TryParse(punto1Y.Text, out y1);
+                double.TryParse(punto2YoRadio.Text, out radio);
 
-                if (radioButton3.Checked)
+                if (opcionArea.Checked)
                 {
                     MessageBox.Show("El resultado es : " + calculadora.AreaCirculo(x1, y1,radio));
                 }
@@ -71,15 +71,15 @@ namespace EJ5
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void opcionTriangulo_CheckedChanged(object sender, EventArgs e)
         {
             label3.Hide();
             label5.Show();
             label6.Show();
 
-            textBox3.Show();
-            textBox5.Show();
-            textBox6.Show();
+            punto2X.Show();
+            punto3X.Show();
+            punto3Y.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -87,20 +87,20 @@ namespace EJ5
             calculadora = new CalculosFiguras();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void salir_click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void opcionCirculo_CheckedChanged(object sender, EventArgs e)
         {
             label3.Show();
             label5.Hide();
             label6.Hide();
 
-            textBox3.Hide();
-            textBox5.Hide();
-            textBox6.Hide();
+            punto2X.Hide();
+            punto3X.Hide();
+            punto3Y.Hide();
 
         }
 

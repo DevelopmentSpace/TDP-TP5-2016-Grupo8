@@ -17,15 +17,15 @@ namespace EJ2
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Click_Verificar(object sender, EventArgs e)
         {
             
             MessageBox.Show("Estado de los mensajes  : " + 
-                radioButton1.Text + ": " + radioButton1.Checked + " - " +
-                radioButton2.Text + ": " + radioButton2.Checked + " - " +
-                radioButton3.Text + ": " + radioButton3.Checked + " - " +
-                checkBox1.Text + ": " + checkBox1.Checked + " - " +
-                checkBox2.Text + ": " + checkBox2.Checked);
+                RadioBoton1.Text + ": " + RadioBoton1.Checked + " - " +
+                RadioBoton2.Text + ": " + RadioBoton2.Checked + " - " +
+                RadioBoton3.Text + ": " + RadioBoton3.Checked + " - " +
+                Caja1.Text + ": " + Caja1.Checked + " - " +
+                Caja2.Text + ": " + Caja2.Checked);
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)

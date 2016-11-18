@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EJ4
+namespace EJ6_
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace EJ4
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PruebaLista());
+            Application.Run(new Form1());
         }
     }
 }

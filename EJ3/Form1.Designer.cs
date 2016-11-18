@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.OpcionNumero = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Traduccion = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // OpcionNumero
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.OpcionNumero.FormattingEnabled = true;
+            this.OpcionNumero.Items.AddRange(new object[] {
             "Uno",
             "Dos",
             "Tres",
@@ -48,50 +48,50 @@
             "Ocho",
             "Nueve",
             "Diez"});
-            this.comboBox1.Location = new System.Drawing.Point(148, 82);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            this.comboBox1.SelectionChangeCommitted += new System.EventHandler(this.comboBox1_SelectionChangeCommitted);
+            this.OpcionNumero.Location = new System.Drawing.Point(145, 45);
+            this.OpcionNumero.Name = "OpcionNumero";
+            this.OpcionNumero.Size = new System.Drawing.Size(121, 21);
+            this.OpcionNumero.TabIndex = 0;
+            this.OpcionNumero.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.OpcionNumero.SelectionChangeCommitted += new System.EventHandler(this.OpcionNumero_SelectionChangeCommitted);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 82);
+            this.label1.Location = new System.Drawing.Point(40, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Numero";
+            this.label1.Text = "Numero:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 157);
+            this.label2.Location = new System.Drawing.Point(23, 120);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Traduccion";
+            this.label2.Text = "Traduccion:";
             // 
-            // label3
+            // Traduccion
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(219, 157);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
-            this.label3.TabIndex = 3;
+            this.Traduccion.AutoSize = true;
+            this.Traduccion.Location = new System.Drawing.Point(216, 120);
+            this.Traduccion.Name = "Traduccion";
+            this.Traduccion.Size = new System.Drawing.Size(0, 13);
+            this.Traduccion.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(626, 261);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(313, 166);
+            this.Controls.Add(this.Traduccion);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.OpcionNumero);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "TraducirNumero";
             this.TextChanged += new System.EventHandler(this.Form1_TextChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -100,10 +100,10 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox OpcionNumero;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label Traduccion;
     }
 }
 

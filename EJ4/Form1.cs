@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EJ4
 {
-    public partial class Form1 : Form
+    public partial class PruebaLista : Form
     {
-        public Form1()
+        public PruebaLista()
         {
             InitializeComponent();
         }

@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.calcular = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.opcionCirculo = new System.Windows.Forms.RadioButton();
+            this.opcionTriangulo = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.opcionPerimetro = new System.Windows.Forms.RadioButton();
+            this.opcionArea = new System.Windows.Forms.RadioButton();
+            this.salir = new System.Windows.Forms.Button();
+            this.punto1X = new System.Windows.Forms.TextBox();
+            this.punto1Y = new System.Windows.Forms.TextBox();
+            this.punto2X = new System.Windows.Forms.TextBox();
+            this.punto2YoRadio = new System.Windows.Forms.TextBox();
+            this.punto3X = new System.Windows.Forms.TextBox();
+            this.punto3Y = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,20 +52,20 @@
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // calcular
             // 
-            this.button1.Location = new System.Drawing.Point(108, 280);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Calcular";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.calcular.Location = new System.Drawing.Point(108, 280);
+            this.calcular.Name = "calcular";
+            this.calcular.Size = new System.Drawing.Size(75, 23);
+            this.calcular.TabIndex = 0;
+            this.calcular.Text = "Calcular";
+            this.calcular.UseVisualStyleBackColor = true;
+            this.calcular.Click += new System.EventHandler(this.calcular_click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.opcionCirculo);
+            this.groupBox1.Controls.Add(this.opcionTriangulo);
             this.groupBox1.Location = new System.Drawing.Point(34, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(119, 78);
@@ -74,10 +74,35 @@
             this.groupBox1.Text = "Forma";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // opcionCirculo
+            // 
+            this.opcionCirculo.AutoSize = true;
+            this.opcionCirculo.Location = new System.Drawing.Point(20, 44);
+            this.opcionCirculo.Name = "opcionCirculo";
+            this.opcionCirculo.Size = new System.Drawing.Size(57, 17);
+            this.opcionCirculo.TabIndex = 1;
+            this.opcionCirculo.TabStop = true;
+            this.opcionCirculo.Text = "Circulo";
+            this.opcionCirculo.UseVisualStyleBackColor = true;
+            this.opcionCirculo.CheckedChanged += new System.EventHandler(this.opcionCirculo_CheckedChanged);
+            // 
+            // opcionTriangulo
+            // 
+            this.opcionTriangulo.AutoSize = true;
+            this.opcionTriangulo.Checked = true;
+            this.opcionTriangulo.Location = new System.Drawing.Point(20, 20);
+            this.opcionTriangulo.Name = "opcionTriangulo";
+            this.opcionTriangulo.Size = new System.Drawing.Size(69, 17);
+            this.opcionTriangulo.TabIndex = 0;
+            this.opcionTriangulo.TabStop = true;
+            this.opcionTriangulo.Text = "Triangulo";
+            this.opcionTriangulo.UseVisualStyleBackColor = true;
+            this.opcionTriangulo.CheckedChanged += new System.EventHandler(this.opcionTriangulo_CheckedChanged);
+            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton4);
-            this.groupBox2.Controls.Add(this.radioButton3);
+            this.groupBox2.Controls.Add(this.opcionPerimetro);
+            this.groupBox2.Controls.Add(this.opcionArea);
             this.groupBox2.Location = new System.Drawing.Point(195, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(127, 78);
@@ -86,105 +111,80 @@
             this.groupBox2.Text = "Calcular";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // radioButton1
+            // opcionPerimetro
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(20, 20);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(69, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Triangulo";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.opcionPerimetro.AutoSize = true;
+            this.opcionPerimetro.Location = new System.Drawing.Point(19, 42);
+            this.opcionPerimetro.Name = "opcionPerimetro";
+            this.opcionPerimetro.Size = new System.Drawing.Size(69, 17);
+            this.opcionPerimetro.TabIndex = 1;
+            this.opcionPerimetro.TabStop = true;
+            this.opcionPerimetro.Text = "Perimetro";
+            this.opcionPerimetro.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // opcionArea
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(20, 44);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(57, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Circulo";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.opcionArea.AutoSize = true;
+            this.opcionArea.Checked = true;
+            this.opcionArea.Location = new System.Drawing.Point(20, 19);
+            this.opcionArea.Name = "opcionArea";
+            this.opcionArea.Size = new System.Drawing.Size(47, 17);
+            this.opcionArea.TabIndex = 0;
+            this.opcionArea.TabStop = true;
+            this.opcionArea.Text = "Area";
+            this.opcionArea.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // salir
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Checked = true;
-            this.radioButton3.Location = new System.Drawing.Point(20, 19);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(47, 17);
-            this.radioButton3.TabIndex = 0;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Area";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.salir.Location = new System.Drawing.Point(232, 280);
+            this.salir.Name = "salir";
+            this.salir.Size = new System.Drawing.Size(75, 23);
+            this.salir.TabIndex = 3;
+            this.salir.Text = "Salir";
+            this.salir.UseVisualStyleBackColor = true;
+            this.salir.Click += new System.EventHandler(this.salir_click);
             // 
-            // radioButton4
+            // punto1X
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(19, 42);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(69, 17);
-            this.radioButton4.TabIndex = 1;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Perimetro";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.punto1X.Location = new System.Drawing.Point(53, 140);
+            this.punto1X.Name = "punto1X";
+            this.punto1X.Size = new System.Drawing.Size(100, 20);
+            this.punto1X.TabIndex = 4;
             // 
-            // button2
+            // punto1Y
             // 
-            this.button2.Location = new System.Drawing.Point(232, 280);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Salir";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.punto1Y.Location = new System.Drawing.Point(243, 140);
+            this.punto1Y.Name = "punto1Y";
+            this.punto1Y.Size = new System.Drawing.Size(100, 20);
+            this.punto1Y.TabIndex = 5;
             // 
-            // textBox1
+            // punto2X
             // 
-            this.textBox1.Location = new System.Drawing.Point(53, 140);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.punto2X.Location = new System.Drawing.Point(54, 183);
+            this.punto2X.Name = "punto2X";
+            this.punto2X.Size = new System.Drawing.Size(100, 20);
+            this.punto2X.TabIndex = 6;
             // 
-            // textBox2
+            // punto2YoRadio
             // 
-            this.textBox2.Location = new System.Drawing.Point(243, 140);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
+            this.punto2YoRadio.Location = new System.Drawing.Point(243, 183);
+            this.punto2YoRadio.Name = "punto2YoRadio";
+            this.punto2YoRadio.Size = new System.Drawing.Size(100, 20);
+            this.punto2YoRadio.TabIndex = 7;
             // 
-            // textBox3
+            // punto3X
             // 
-            this.textBox3.Location = new System.Drawing.Point(54, 183);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 6;
+            this.punto3X.Location = new System.Drawing.Point(53, 231);
+            this.punto3X.Name = "punto3X";
+            this.punto3X.Size = new System.Drawing.Size(100, 20);
+            this.punto3X.TabIndex = 8;
             // 
-            // textBox4
+            // punto3Y
             // 
-            this.textBox4.Location = new System.Drawing.Point(243, 183);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 7;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(53, 231);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 8;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(243, 231);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 9;
+            this.punto3Y.Location = new System.Drawing.Point(243, 231);
+            this.punto3Y.Name = "punto3Y";
+            this.punto3Y.Size = new System.Drawing.Size(100, 20);
+            this.punto3Y.TabIndex = 9;
             // 
             // label1
             // 
@@ -254,18 +254,18 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.punto3Y);
+            this.Controls.Add(this.punto3X);
+            this.Controls.Add(this.punto2YoRadio);
+            this.Controls.Add(this.punto2X);
+            this.Controls.Add(this.punto1Y);
+            this.Controls.Add(this.punto1X);
+            this.Controls.Add(this.salir);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.calcular);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Calculo de areas y permitros";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -278,20 +278,20 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button calcular;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.RadioButton opcionCirculo;
+        private System.Windows.Forms.RadioButton opcionTriangulo;
+        private System.Windows.Forms.RadioButton opcionPerimetro;
+        private System.Windows.Forms.RadioButton opcionArea;
+        private System.Windows.Forms.Button salir;
+        private System.Windows.Forms.TextBox punto1X;
+        private System.Windows.Forms.TextBox punto1Y;
+        private System.Windows.Forms.TextBox punto2X;
+        private System.Windows.Forms.TextBox punto2YoRadio;
+        private System.Windows.Forms.TextBox punto3X;
+        private System.Windows.Forms.TextBox punto3Y;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

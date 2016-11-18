@@ -1,6 +1,6 @@
 ﻿namespace EJ4
 {
-    partial class Form1
+    partial class PruebaLista
     {
         /// <summary>
         /// Required designer variable.
@@ -105,7 +105,7 @@
             this.listBox1.Size = new System.Drawing.Size(337, 82);
             this.listBox1.TabIndex = 6;
             // 
-            // Form1
+            // PruebaLista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -117,8 +117,8 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "PruebaLista";
+            this.Text = "PruebaLista";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 

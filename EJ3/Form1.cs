@@ -25,10 +25,10 @@ namespace EJ3
         {
         }
 
-        private void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)
+        private void OpcionNumero_SelectionChangeCommitted(object sender, EventArgs e)
         {
             string[] aux = {"One","Two","Three","Four","Five","Six", "Seven","Eight","Nine","Ten"};
-            label3.Text = aux[comboBox1.SelectedIndex];
+            Traduccion.Text = aux[OpcionNumero.SelectedIndex];
         }
     }
 }
