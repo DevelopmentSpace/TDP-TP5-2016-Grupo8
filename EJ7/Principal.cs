@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace EJ7
 {
-    public partial class Form1 : Form
+    public partial class Principal : Form
     {
 
         Criptografia criptografia;
 
-        public Form1()
+        public Principal()
         {
             InitializeComponent();
         }

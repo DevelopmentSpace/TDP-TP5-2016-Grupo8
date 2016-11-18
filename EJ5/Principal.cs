@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace EJ5
 {
-    public partial class Form1 : Form
+    public partial class Principal : Form
     {
         private CalculosFiguras calculadora;
         
-        public Form1()
+        public Principal()
         {
             InitializeComponent();
 

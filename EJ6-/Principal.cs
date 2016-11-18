@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace EJ6_
 {
-    public partial class Form1 : Form
+    public partial class Principal : Form
     {
 
         AdmCuentas administrador;
 
-        public Form1()
+        public Principal()
         {
             InitializeComponent();
         }
