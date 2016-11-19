@@ -65,12 +65,12 @@ namespace EJ8
                     }
                 case "Modificar usuario":
                     {
-                        AccionEjecutarse.Text = "Modifica un usuario";
+                        //Esto tambien
                         break;
                     }
                 case "Mostrar usuario":
                     {
-                        AccionEjecutarse.Text = "Muestra un usuario";
+                        //Esto hay que completar.
                         break;
                     }
                 case "Eliminar usuario":
