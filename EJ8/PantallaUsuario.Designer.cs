@@ -74,6 +74,7 @@
             this.codigoUsuario.Size = new System.Drawing.Size(100, 20);
             this.codigoUsuario.TabIndex = 3;
             this.codigoUsuario.TextChanged += new System.EventHandler(this.codigoUsuario_TextChanged);
+            this.codigoUsuario.Leave += new System.EventHandler(this.codigoUsuario_Leave);
             // 
             // nombreYapellidoUsuario
             // 

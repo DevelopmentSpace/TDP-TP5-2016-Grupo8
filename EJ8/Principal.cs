@@ -35,10 +35,18 @@ namespace EJ8
             }
             catch (KeyNotFoundException)
             {
-                MessageBox.Show("Clave no encontrada");
+                MessageBox.Show("Clave no encontrada en la lista");
             }
 
         }
+
+        public void modificarUsuario(string pCodigo,string pNombreCompleto,string pCorreoElectronico)
+        {
+            repositorio.actualizarUsuario(pCodigo, pNombreCompleto, pCorreoElectronico);
+            MessageBox.Show("Usuario actualizado con exito.");
+
+        }
+
         public Dictionary<string,string> obtenerPorCodigo(string pCodigo)
         {
             return repositorio.obtenerPorCodigo(pCodigo);
@@ -63,10 +71,7 @@ namespace EJ8
 
         }
 
-        private void Principal_Load(object sender, EventArgs e)
-        {
-            repositorio = new FachadaRepositorio();
-        }
+
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -74,6 +79,19 @@ namespace EJ8
             newMDIChild.MdiParent = this;
             newMDIChild.Text = "Eliminar usuario";
             newMDIChild.Show();
+        }
+
+        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PantallaUsuario newMDIChild = new PantallaUsuario();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Text = "Modificar usuario";
+            newMDIChild.Show();
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+            repositorio = new FachadaRepositorio();
         }
     }
 }

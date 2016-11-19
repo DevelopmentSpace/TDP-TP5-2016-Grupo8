@@ -29,7 +29,9 @@ namespace EJ8
                     }
                 case "Modificar usuario":
                     {
-                        AccionEjecutarse.Text = "Modifica un usuario";
+                        ((Principal)this.MdiParent).modificarUsuario(codigoUsuario.Text,nombreYapellidoUsuario.Text,correoUsuario.Text);
+                        this.Close();
+
                         break;
                     }
                 case "Mostrar usuario":
@@ -65,7 +67,7 @@ namespace EJ8
                     }
                 case "Modificar usuario":
                     {
-                        //Esto tambien
+                        AccionEjecutarse.Text = "Modificar usuario";
                         break;
                     }
                 case "Mostrar usuario":
@@ -86,9 +88,10 @@ namespace EJ8
 
         }
 
-        private void codigoUsuario_TextChanged(object sender, EventArgs e)
+        //Lo puse cuando salga por que si no, no te deja meter cadenas de varios caracteres. Habria que solucionar el tema de que puedas salir.
+        private void codigoUsuario_Leave(object sender, EventArgs e)
         {
-            if (Text == "Eliminar usuario")
+            if (Text == "Eliminar usuario" || Text == "Modificar usuario")
             {
                 try
                 {
@@ -99,9 +102,14 @@ namespace EJ8
                 catch (ArgumentOutOfRangeException)
                 {
                     MessageBox.Show("Codigo no encontrado");
+                    this.Close();
                 }
-
             }
+        }
+
+        private void codigoUsuario_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
