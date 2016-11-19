@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EJ8
 {
-    public partial class Listar : Form
+    public partial class PantallaListar : Form
     {
-        public Listar()
+        public PantallaListar()
         {
             InitializeComponent();
         }

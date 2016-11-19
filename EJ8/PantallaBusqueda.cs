@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EJ8
 {
-    public partial class Busquedas : Form
+    public partial class PantallaBusqueda : Form
     {
-        public Busquedas()
+        public PantallaBusqueda()
         {
             InitializeComponent();
         }

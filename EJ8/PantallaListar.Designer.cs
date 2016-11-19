@@ -1,6 +1,6 @@
 ﻿namespace EJ8
 {
-    partial class Listar
+    partial class PantallaListar
     {
         /// <summary>
         /// Required designer variable.
@@ -31,8 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.NombreABuscar = new System.Windows.Forms.TextBox();
-            this.BotonDeBusqueda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,38 +55,20 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(54, 114);
+            this.dataGridView1.Location = new System.Drawing.Point(51, 99);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(319, 152);
             this.dataGridView1.TabIndex = 2;
             // 
-            // NombreABuscar
-            // 
-            this.NombreABuscar.Location = new System.Drawing.Point(54, 77);
-            this.NombreABuscar.Name = "NombreABuscar";
-            this.NombreABuscar.Size = new System.Drawing.Size(100, 20);
-            this.NombreABuscar.TabIndex = 3;
-            // 
-            // BotonDeBusqueda
-            // 
-            this.BotonDeBusqueda.Location = new System.Drawing.Point(175, 77);
-            this.BotonDeBusqueda.Name = "BotonDeBusqueda";
-            this.BotonDeBusqueda.Size = new System.Drawing.Size(75, 23);
-            this.BotonDeBusqueda.TabIndex = 4;
-            this.BotonDeBusqueda.Text = "Buscar";
-            this.BotonDeBusqueda.UseVisualStyleBackColor = true;
-            // 
-            // Listar
+            // PantallaListar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 304);
-            this.Controls.Add(this.BotonDeBusqueda);
-            this.Controls.Add(this.NombreABuscar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Listar";
+            this.Name = "PantallaListar";
             this.Text = "Listar";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -101,7 +81,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox NombreABuscar;
-        private System.Windows.Forms.Button BotonDeBusqueda;
     }
 }

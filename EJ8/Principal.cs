@@ -12,11 +12,41 @@ namespace EJ8
 {
     public partial class Principal : Form
     {
-        IRepositorioUsuarios repositorio;
+        FachadaRepositorio repositorio;
 
         public Principal()
         {
             InitializeComponent();
+        }
+
+        public void agregarUsuario(string pNombreCompleto,string pCorreoElectronico)
+        {
+            repositorio.agregarUsuario(pNombreCompleto, pCorreoElectronico);
+            MessageBox.Show("Usuario agregado con exito.");
+        }
+
+        public void eliminarUsuario(string pCodigo)
+        {
+            try
+            {
+                repositorio.eliminarUsuario(pCodigo);
+                MessageBox.Show("Usuario eliminado con exito.");
+
+            }
+            catch (KeyNotFoundException)
+            {
+                MessageBox.Show("Clave no encontrada");
+            }
+
+        }
+        public Dictionary<string,string> obtenerPorCodigo(string pCodigo)
+        {
+            return repositorio.obtenerPorCodigo(pCodigo);
+        }
+
+        public string ultimoCodigo()
+        {
+            return repositorio.ultimoCodigo().ToString();
         }
 
         private void ascendenteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -35,7 +65,15 @@ namespace EJ8
 
         private void Principal_Load(object sender, EventArgs e)
         {
-            repositorio = new Repositorio();
+            repositorio = new FachadaRepositorio();
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PantallaUsuario newMDIChild = new PantallaUsuario();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Text = "Eliminar usuario";
+            newMDIChild.Show();
         }
     }
 }

@@ -25,7 +25,8 @@ namespace EJ8
         {
             Usuario unUsuario = new Usuario();
             unUsuario.Codigo = pCodigo;
-            iUsuarios.Remove(unUsuario);
+            if (!iUsuarios.Remove(unUsuario))
+                throw new KeyNotFoundException();
         }
 
         public IList<Usuario> ObtenerTodos()
@@ -61,6 +62,19 @@ namespace EJ8
 
             return listaAprox;
 
+        }
+        public int ultimoCodigo()
+        {
+            if (iUsuarios.Count() == 0)
+            {
+                return 0;
+            }
+            else { 
+                int ultimoCodigo;
+                int.TryParse(iUsuarios.Last().Codigo, out ultimoCodigo);
+
+                return ultimoCodigo + 1;
+            }
         }
 
     }

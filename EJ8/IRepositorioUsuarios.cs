@@ -15,5 +15,6 @@ namespace EJ8
         Usuario ObtenerPorCodigo(string pCodigo);
         IList<Usuario> ObtenerOrdenadosPor(IComparer<Usuario> pComparador);
         IList<Usuario> ObtenerPorAproximacion(string pNombreCompleto);
+        int ultimoCodigo();
     }
 }

@@ -46,18 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Busquedas.cs">
+    <Compile Include="PantallaBusqueda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Busquedas.Designer.cs">
-      <DependentUpon>Busquedas.cs</DependentUpon>
+    <Compile Include="PantallaBusqueda.Designer.cs">
+      <DependentUpon>PantallaBusqueda.cs</DependentUpon>
     </Compile>
     <Compile Include="FachadaRepositorio.cs" />
-    <Compile Include="Listar.cs">
+    <Compile Include="PantallaListar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Listar.Designer.cs">
-      <DependentUpon>Listar.cs</DependentUpon>
+    <Compile Include="PantallaListar.Designer.cs">
+      <DependentUpon>PantallaListar.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallaUsuario.cs">
       <SubType>Form</SubType>
@@ -76,11 +76,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio.cs" />
     <Compile Include="Usuario.cs" />
-    <EmbeddedResource Include="Busquedas.resx">
-      <DependentUpon>Busquedas.cs</DependentUpon>
+    <EmbeddedResource Include="PantallaBusqueda.resx">
+      <DependentUpon>PantallaBusqueda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Listar.resx">
-      <DependentUpon>Listar.cs</DependentUpon>
+    <EmbeddedResource Include="PantallaListar.resx">
+      <DependentUpon>PantallaListar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaUsuario.resx">
       <DependentUpon>PantallaUsuario.cs</DependentUpon>

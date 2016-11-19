@@ -1,6 +1,6 @@
 ﻿namespace EJ8
 {
-    partial class Busquedas
+    partial class PantallaBusqueda
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.TipoBusqueda = new System.Windows.Forms.Label();
+            this.resultadoBusqueda = new System.Windows.Forms.DataGridView();
+            this.botonBusqueda = new System.Windows.Forms.Button();
+            this.textoBusqueda = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.resultadoBusqueda)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -50,15 +54,43 @@
             this.TipoBusqueda.TabIndex = 1;
             this.TipoBusqueda.Text = "TipoBusqueda";
             // 
+            // resultadoBusqueda
+            // 
+            this.resultadoBusqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.resultadoBusqueda.Location = new System.Drawing.Point(45, 113);
+            this.resultadoBusqueda.Name = "resultadoBusqueda";
+            this.resultadoBusqueda.Size = new System.Drawing.Size(355, 121);
+            this.resultadoBusqueda.TabIndex = 2;
+            // 
+            // botonBusqueda
+            // 
+            this.botonBusqueda.Location = new System.Drawing.Point(231, 81);
+            this.botonBusqueda.Name = "botonBusqueda";
+            this.botonBusqueda.Size = new System.Drawing.Size(75, 23);
+            this.botonBusqueda.TabIndex = 3;
+            this.botonBusqueda.Text = "Buscar";
+            this.botonBusqueda.UseVisualStyleBackColor = true;
+            // 
+            // textoBusqueda
+            // 
+            this.textoBusqueda.Location = new System.Drawing.Point(113, 83);
+            this.textoBusqueda.Name = "textoBusqueda";
+            this.textoBusqueda.Size = new System.Drawing.Size(100, 20);
+            this.textoBusqueda.TabIndex = 4;
+            // 
             // Busquedas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(453, 274);
+            this.Controls.Add(this.textoBusqueda);
+            this.Controls.Add(this.botonBusqueda);
+            this.Controls.Add(this.resultadoBusqueda);
             this.Controls.Add(this.TipoBusqueda);
             this.Controls.Add(this.label1);
             this.Name = "Busquedas";
             this.Text = "Busquedas";
+            ((System.ComponentModel.ISupportInitialize)(this.resultadoBusqueda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -68,5 +100,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label TipoBusqueda;
+        private System.Windows.Forms.DataGridView resultadoBusqueda;
+        private System.Windows.Forms.Button botonBusqueda;
+        private System.Windows.Forms.TextBox textoBusqueda;
     }
 }
