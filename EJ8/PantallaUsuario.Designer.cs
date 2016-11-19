@@ -106,6 +106,7 @@
             this.CancelarAccion.TabIndex = 8;
             this.CancelarAccion.Text = "Cancelar";
             this.CancelarAccion.UseVisualStyleBackColor = true;
+            this.CancelarAccion.Click += new System.EventHandler(this.CancelarAccion_Click);
             // 
             // label4
             // 
@@ -140,8 +141,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "PantallaUsuario";
             this.Text = "Pantalla Usuario";
+            this.Load += new System.EventHandler(this.PantallaUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

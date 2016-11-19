@@ -12,6 +12,8 @@ namespace EJ8
 {
     public partial class Principal : Form
     {
+        IRepositorioUsuarios repositorio;
+
         public Principal()
         {
             InitializeComponent();
@@ -24,7 +26,16 @@ namespace EJ8
 
         private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          
+            PantallaUsuario newMDIChild = new PantallaUsuario();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Text = "Agregar usuario";
+            newMDIChild.Show();
+
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+            repositorio = new Repositorio();
         }
     }
 }

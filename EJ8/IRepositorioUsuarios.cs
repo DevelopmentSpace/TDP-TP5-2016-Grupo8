@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EJ6
+namespace EJ8
 {
     public interface IRepositorioUsuarios
     {
