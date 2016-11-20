@@ -6,25 +6,55 @@ using System.Threading.Tasks;
 
 namespace EJ8
 {
-    public class Usuario:IComparable<Usuario>
-    {
-        private string iCodigo, iNombreCompleto,iCorreoElectronico;
-
-        public string Codigo {  get { return iCodigo; }
-                                set { iCodigo = value; }
-        }
-
-        public string NombreCompleto { get { return iNombreCompleto; }
-                                        set { iNombreCompleto = value; }
-        }
-
-        public string CorreoElectronico
+        /// <summary>
+        /// Clase que representa a un usuario
+        /// </summary>
+        public class Usuario : IComparable<Usuario>
         {
-            get { return iCorreoElectronico; }
-            set { iCorreoElectronico = value; }
-        }
+            private string iCodigo, iNombreCompleto, iCorreoElectronico;
 
-        public Usuario Copy()
+            /// <summary>
+            /// Codigo identificador unico del usuario
+            /// </summary>
+            public string Codigo
+            {
+                get { return iCodigo; }
+                set { iCodigo = value; }
+            }
+
+            /// <summary>
+            /// NombreCompleto del usuario
+            /// </summary>
+            public string NombreCompleto
+            {
+                get { return iNombreCompleto; }
+                set { iNombreCompleto = value; }
+            }
+
+            /// <summary>
+            /// Correo Electronico del usuario
+            /// </summary>
+            public string CorreoElectronico
+            {
+                get { return iCorreoElectronico; }
+                set { iCorreoElectronico = value; }
+            }
+
+            /// <summary>
+            /// Compara al usuario con otro en base al codigo
+            /// </summary>
+            /// <param name="other">Usuario con el cual comparar</param>
+            /// <returns></returns>
+            public int CompareTo(Usuario other)
+            {
+                return String.Compare(this.iCodigo, other.Codigo);
+            }
+ 
+/// <summary>
+/// Devuelve una copia del usuario.
+/// </summary>
+/// <returns>Copia del usuario</returns>
+    public Usuario Copy()
         {
            Usuario us = new Usuario();
 
@@ -33,12 +63,6 @@ namespace EJ8
            us.NombreCompleto = this.NombreCompleto;
 
             return us;
-        }
-
-
-        public int CompareTo(Usuario other)
-        {
-            return String.Compare(this.iCodigo, other.Codigo);
         }
 
         public override bool Equals(object obj)

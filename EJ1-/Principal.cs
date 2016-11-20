@@ -41,5 +41,10 @@ namespace EJ1_
         {
             MessageBox.Show("Se ha presionado el boton 5");
         }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

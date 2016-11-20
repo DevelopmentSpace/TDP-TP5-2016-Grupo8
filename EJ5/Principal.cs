@@ -25,6 +25,7 @@ namespace EJ5
         {
             if (opcionTriangulo.Checked)
             {
+                //Pasando los puntos en string a double
                 double x1,x2,x3,y1,y2,y3;
                 double.TryParse(punto1X.Text, out x1);
                 double.TryParse(punto2X.Text, out x2);
@@ -45,6 +46,7 @@ namespace EJ5
             }
             else
             {
+                //Pasando los puntos y el radio en string a doble
                 double x1, y1, radio;
                 double.TryParse(punto1X.Text, out x1);
                 double.TryParse(punto1Y.Text, out y1);
@@ -73,6 +75,7 @@ namespace EJ5
 
         private void opcionTriangulo_CheckedChanged(object sender, EventArgs e)
         {
+            //Al cambiar de opcion se esconden los puntos que no se usan junto con sus correspondientes etiquetas.
             label3.Hide();
             label5.Show();
             label6.Show();
@@ -81,6 +84,20 @@ namespace EJ5
             punto3X.Show();
             punto3Y.Show();
         }
+
+        private void opcionCirculo_CheckedChanged(object sender, EventArgs e)
+        {
+            //Al cambiar de opcion se esconden los puntos que no se usan junto con sus correspondientes etiquetas.
+            label3.Show();
+            label5.Hide();
+            label6.Hide();
+
+            punto2X.Hide();
+            punto3X.Hide();
+            punto3Y.Hide();
+
+        }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -92,17 +109,6 @@ namespace EJ5
             this.Close();
         }
 
-        private void opcionCirculo_CheckedChanged(object sender, EventArgs e)
-        {
-            label3.Show();
-            label5.Hide();
-            label6.Hide();
-
-            punto2X.Hide();
-            punto3X.Hide();
-            punto3Y.Hide();
-
-        }
 
         private void label4_Click(object sender, EventArgs e)
         {

@@ -85,7 +85,7 @@
             this.Boton5.UseVisualStyleBackColor = true;
             this.Boton5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // Form1
+            // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -95,8 +95,9 @@
             this.Controls.Add(this.Boton3);
             this.Controls.Add(this.Boton2);
             this.Controls.Add(this.Boton1);
-            this.Name = "Form1";
+            this.Name = "Principal";
             this.Text = "PruebaBotones";
+            this.Load += new System.EventHandler(this.Principal_Load);
             this.ResumeLayout(false);
 
         }

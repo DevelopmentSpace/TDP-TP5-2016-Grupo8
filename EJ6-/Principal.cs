@@ -27,16 +27,19 @@ namespace EJ6_
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //Carga el programa, crea un administrador de cuentas junto con su cliente.
             administrador = new AdmCuentas();
             administrador.CrearCliente(TipoDocumento.DNI, "12345678", "Gonzales Hernan");
             administrador.CrearCuentas();
 
             this.actualizarPantalla();
 
+            //Muestra en pantalla el nombre y apellido del cliente
             NomYApeCliente.Text = administrador.Cliente.Nombre;
         }
         private void actualizarPantalla()
         {
+            //Se encarga de actualizar los saldos en pantalla
             SaldoCuentaCorriente.Text = administrador.CuentaCorriente.Saldo.ToString();
             SaldoCajaAhorro.Text = administrador.CajaDeAhorro.Saldo.ToString();
         }
@@ -44,8 +47,8 @@ namespace EJ6_
         private void transferirCCaCA_Click(object sender, EventArgs e)
         {
             float saldotransferir;
-
             float.TryParse(MontoAUsar.Text, out saldotransferir);
+
             try
             {
                 administrador.TransferirACuentaCorriente(saldotransferir);
@@ -70,8 +73,8 @@ namespace EJ6_
         private void transferirCAaCC_Click(object sender, EventArgs e)
         {
             float saldotransferir;
-
             float.TryParse(MontoAUsar.Text, out saldotransferir);
+
             try
             {
                 administrador.TransferirACajaAhorro(saldotransferir);
@@ -107,6 +110,7 @@ namespace EJ6_
         {
             float montoADebitar;
             float.TryParse(MontoAUsar.Text, out montoADebitar);
+
             try
             {
                 administrador.CajaDeAhorro.DebitarSaldo(montoADebitar);
@@ -131,6 +135,7 @@ namespace EJ6_
         {
             float montoADebitar;
             float.TryParse(MontoAUsar.Text, out montoADebitar);
+
             try
             {
                 administrador.CuentaCorriente.DebitarSaldo(montoADebitar);
@@ -155,6 +160,7 @@ namespace EJ6_
         {
             float montoADebitar;
             float.TryParse(MontoAUsar.Text, out montoADebitar);
+
             try
             {
                 administrador.CajaDeAhorro.AcreditarSaldo(montoADebitar);
@@ -180,6 +186,7 @@ namespace EJ6_
             {
                 float montoADebitar;
                 float.TryParse(MontoAUsar.Text, out montoADebitar);
+
                 try
                 {
                     administrador.CuentaCorriente.AcreditarSaldo(montoADebitar);

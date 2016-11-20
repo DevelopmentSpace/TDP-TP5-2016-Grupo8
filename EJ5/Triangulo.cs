@@ -12,7 +12,7 @@ namespace EJ1
         private Punto iPunto1, iPunto2, iPunto3;
         
         /// <summary>
-        /// 
+        /// Crea un triangulo
         /// </summary>
         /// <param name="pPunto1">Punto 1 del triangulo</param>
         /// <param name="pPunto2">Punto 2 del triangulo</param>

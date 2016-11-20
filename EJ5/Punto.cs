@@ -12,7 +12,7 @@ namespace EJ1
         private double iX, iY;
 
         /// <summary>
-        /// 
+        /// Crea un punto
         /// </summary>
         /// <param name="pX">Coordenada en x del punto</param>
         /// <param name="pY">Coordenada en y del punto</param>

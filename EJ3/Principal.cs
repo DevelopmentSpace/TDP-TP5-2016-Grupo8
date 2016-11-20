@@ -27,6 +27,7 @@ namespace EJ3
 
         private void OpcionNumero_SelectionChangeCommitted(object sender, EventArgs e)
         {
+            //Se crea un array con los numeros traducidos y segun el numero seleccionado se muestra su respectiva traduccion.
             string[] aux = {"One","Two","Three","Four","Five","Six", "Seven","Eight","Nine","Ten"};
             Traduccion.Text = aux[OpcionNumero.SelectedIndex];
         }
