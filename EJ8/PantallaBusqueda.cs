@@ -16,5 +16,57 @@ namespace EJ8
         {
             InitializeComponent();
         }
+
+        private void botonBusqueda_Click(object sender, EventArgs e)
+        {
+
+            if (this.Text == "Buscar codigo")
+            {
+                if (resultadoBusqueda.Rows.Count == 1)
+                {
+                    resultadoBusqueda.Rows.RemoveAt(0);
+                }
+
+                try
+                {
+
+                    Dictionary<string, string> usuario = ((Principal)this.MdiParent).obtenerPorCodigo(textoBusqueda.Text);
+                    resultadoBusqueda.Rows.Add(textoBusqueda.Text, usuario["NombreYApellido"], usuario["CorreoElectronico"]);
+                }
+                catch (ArgumentOutOfRangeException)
+                {
+                    MessageBox.Show("No se han encontrado usuarios con ese codigo");
+                }
+               
+            }
+            else
+            {
+                int numeroFilas = resultadoBusqueda.Rows.Count;
+                for (int i = 0; i <= numeroFilas - 1; i++)
+                {
+                    resultadoBusqueda.Rows.RemoveAt(0);
+                }
+
+
+                IList<Dictionary<string, string>> listaUsuario = ((Principal)this.MdiParent).obtenerPorAproximacion(textoBusqueda.Text);
+                foreach (var usuario in listaUsuario)
+                {
+
+                       resultadoBusqueda.Rows.Add(usuario["Codigo"], usuario["NombreYApellido"], usuario["CorreoElectronico"]);
+                }
+
+            }
+
+        }
+
+        private void resultadoBusqueda_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+           
+        }
+
+        private void PantallaBusqueda_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

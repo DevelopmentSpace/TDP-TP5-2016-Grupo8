@@ -30,8 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.usuariosEncontrados = new System.Windows.Forms.DataGridView();
+            this.columnaCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnaCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosEncontrados)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -52,25 +55,48 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Tipo de listado";
             // 
-            // dataGridView1
+            // usuariosEncontrados
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(51, 99);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(319, 152);
-            this.dataGridView1.TabIndex = 2;
+            this.usuariosEncontrados.AllowUserToAddRows = false;
+            this.usuariosEncontrados.AllowUserToDeleteRows = false;
+            this.usuariosEncontrados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.usuariosEncontrados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.columnaCodigo,
+            this.columnaNombre,
+            this.columnaCorreo});
+            this.usuariosEncontrados.Location = new System.Drawing.Point(42, 100);
+            this.usuariosEncontrados.Name = "usuariosEncontrados";
+            this.usuariosEncontrados.ReadOnly = true;
+            this.usuariosEncontrados.Size = new System.Drawing.Size(343, 167);
+            this.usuariosEncontrados.TabIndex = 2;
+            // 
+            // columnaCodigo
+            // 
+            this.columnaCodigo.HeaderText = "Codigo";
+            this.columnaCodigo.Name = "columnaCodigo";
+            // 
+            // columnaNombre
+            // 
+            this.columnaNombre.HeaderText = "Nombre";
+            this.columnaNombre.Name = "columnaNombre";
+            // 
+            // columnaCorreo
+            // 
+            this.columnaCorreo.HeaderText = "Correo electronico";
+            this.columnaCorreo.Name = "columnaCorreo";
             // 
             // PantallaListar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 304);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.usuariosEncontrados);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "PantallaListar";
             this.Text = "Listar";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.PantallaListar_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosEncontrados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -80,6 +106,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView usuariosEncontrados;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnaCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnaNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnaCorreo;
     }
 }

@@ -31,6 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TipoBusqueda = new System.Windows.Forms.Label();
             this.resultadoBusqueda = new System.Windows.Forms.DataGridView();
+            this.ColumnaCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnaCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.botonBusqueda = new System.Windows.Forms.Button();
             this.textoBusqueda = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.resultadoBusqueda)).BeginInit();
@@ -56,11 +59,37 @@
             // 
             // resultadoBusqueda
             // 
+            this.resultadoBusqueda.AllowUserToAddRows = false;
+            this.resultadoBusqueda.AllowUserToDeleteRows = false;
             this.resultadoBusqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.resultadoBusqueda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnaCodigo,
+            this.ColumnaNombre,
+            this.ColumnaCorreo});
             this.resultadoBusqueda.Location = new System.Drawing.Point(45, 113);
             this.resultadoBusqueda.Name = "resultadoBusqueda";
-            this.resultadoBusqueda.Size = new System.Drawing.Size(355, 121);
+            this.resultadoBusqueda.ReadOnly = true;
+            this.resultadoBusqueda.Size = new System.Drawing.Size(343, 135);
             this.resultadoBusqueda.TabIndex = 2;
+            this.resultadoBusqueda.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.resultadoBusqueda_CellFormatting);
+            // 
+            // ColumnaCodigo
+            // 
+            this.ColumnaCodigo.HeaderText = "Codigo";
+            this.ColumnaCodigo.Name = "ColumnaCodigo";
+            this.ColumnaCodigo.ReadOnly = true;
+            // 
+            // ColumnaNombre
+            // 
+            this.ColumnaNombre.HeaderText = "Nombre";
+            this.ColumnaNombre.Name = "ColumnaNombre";
+            this.ColumnaNombre.ReadOnly = true;
+            // 
+            // ColumnaCorreo
+            // 
+            this.ColumnaCorreo.HeaderText = "Correo electronico";
+            this.ColumnaCorreo.Name = "ColumnaCorreo";
+            this.ColumnaCorreo.ReadOnly = true;
             // 
             // botonBusqueda
             // 
@@ -70,6 +99,7 @@
             this.botonBusqueda.TabIndex = 3;
             this.botonBusqueda.Text = "Buscar";
             this.botonBusqueda.UseVisualStyleBackColor = true;
+            this.botonBusqueda.Click += new System.EventHandler(this.botonBusqueda_Click);
             // 
             // textoBusqueda
             // 
@@ -78,7 +108,7 @@
             this.textoBusqueda.Size = new System.Drawing.Size(100, 20);
             this.textoBusqueda.TabIndex = 4;
             // 
-            // Busquedas
+            // PantallaBusqueda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -88,8 +118,9 @@
             this.Controls.Add(this.resultadoBusqueda);
             this.Controls.Add(this.TipoBusqueda);
             this.Controls.Add(this.label1);
-            this.Name = "Busquedas";
+            this.Name = "PantallaBusqueda";
             this.Text = "Busquedas";
+            this.Load += new System.EventHandler(this.PantallaBusqueda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.resultadoBusqueda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -103,5 +134,8 @@
         private System.Windows.Forms.DataGridView resultadoBusqueda;
         private System.Windows.Forms.Button botonBusqueda;
         private System.Windows.Forms.TextBox textoBusqueda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaCorreo;
     }
 }

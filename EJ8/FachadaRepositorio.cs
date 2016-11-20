@@ -61,7 +61,7 @@ namespace EJ8
             return listaUsuarios;
         }
 
-        public IList<Dictionary<string, string>> obtenerTodos(string pCadena)
+        public IList<Dictionary<string, string>> obtenerPorAproximacion(string pCadena)
         {
             IList<Dictionary<string, string>> listaUsuarios = new List<Dictionary<string, string>> { };
             foreach (Usuario usua in repositorio.ObtenerPorAproximacion(pCadena))
