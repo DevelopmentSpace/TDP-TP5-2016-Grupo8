@@ -34,11 +34,6 @@ namespace EJ8
 
                         break;
                     }
-                case "Mostrar usuario":
-                    {
-                        AccionEjecutarse.Text = "Muestra un usuario";
-                        break;
-                    }
                 case "Eliminar usuario":
                     {
                         ((Principal)this.MdiParent).eliminarUsuario(codigoUsuario.Text);
@@ -54,6 +49,7 @@ namespace EJ8
             this.Close();
         }
 
+        //Al cargar segun el tipo, habilita los botones necesarios
         private void PantallaUsuario_Load(object sender, EventArgs e)
         {
             switch (Text)
@@ -70,11 +66,6 @@ namespace EJ8
                         AccionEjecutarse.Text = "Modificar usuario";
                         break;
                     }
-                case "Mostrar usuario":
-                    {
-                        //Esto hay que completar.
-                        break;
-                    }
                 case "Eliminar usuario":
                     {
                         nombreYapellidoUsuario.Enabled = false;
@@ -88,7 +79,7 @@ namespace EJ8
 
         }
 
-        //Lo puse cuando salga por que si no, no te deja meter cadenas de varios caracteres. Habria que solucionar el tema de que puedas salir.
+        //Cada vez que se sale del texto para elegir codigo ejecuta esto.
         private void codigoUsuario_Leave(object sender, EventArgs e)
         {
             if (Text == "Eliminar usuario" || Text == "Modificar usuario")

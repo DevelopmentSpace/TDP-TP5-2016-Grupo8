@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace EJ8
 {
+    /// <summary>
+    /// Implementacion de IRepositorioUsuarios usando ListaDeUsuario
+    /// </summary>
     public class Repositorio : IRepositorioUsuarios
     {
         IList<Usuario> iUsuarios = new List<Usuario> { };

@@ -17,6 +17,7 @@ namespace EJ8
             InitializeComponent();
         }
 
+        //Al abrir la pantalla, segun el tipo, se cargan las listas que correspondan.
         private void PantallaListar_Load(object sender, EventArgs e)
         {
             switch (Text)

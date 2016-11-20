@@ -17,6 +17,7 @@ namespace EJ8
             InitializeComponent();
         }
 
+        //Segun el tipo al hacer click en buscar, va a buscar lo que se especifique. 
         private void botonBusqueda_Click(object sender, EventArgs e)
         {
 
