@@ -44,5 +44,10 @@ namespace EJ7
 
 
 
+        public IList<string> ObtenerNombresEncriptadores()
+        {
+            return iEncriptadores.Keys.ToList<string>();
+        }
+
     }
 }

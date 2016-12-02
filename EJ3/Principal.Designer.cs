@@ -36,6 +36,7 @@
             // 
             // OpcionNumero
             // 
+            this.OpcionNumero.DisplayMember = "uno";
             this.OpcionNumero.FormattingEnabled = true;
             this.OpcionNumero.Items.AddRange(new object[] {
             "Uno",
@@ -52,7 +53,6 @@
             this.OpcionNumero.Name = "OpcionNumero";
             this.OpcionNumero.Size = new System.Drawing.Size(121, 21);
             this.OpcionNumero.TabIndex = 0;
-            this.OpcionNumero.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.OpcionNumero.SelectionChangeCommitted += new System.EventHandler(this.OpcionNumero_SelectionChangeCommitted);
             // 
             // label1
@@ -81,7 +81,7 @@
             this.Traduccion.Size = new System.Drawing.Size(0, 13);
             this.Traduccion.TabIndex = 3;
             // 
-            // Form1
+            // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -90,9 +90,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.OpcionNumero);
-            this.Name = "Form1";
+            this.Name = "Principal";
             this.Text = "TraducirNumero";
-            this.TextChanged += new System.EventHandler(this.Form1_TextChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 

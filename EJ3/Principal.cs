@@ -17,14 +17,6 @@ namespace EJ3
             InitializeComponent();
         }
 
-        private void Form1_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
         private void OpcionNumero_SelectionChangeCommitted(object sender, EventArgs e)
         {
             //Se crea un array con los numeros traducidos y segun el numero seleccionado se muestra su respectiva traduccion.

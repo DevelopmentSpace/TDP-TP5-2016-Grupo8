@@ -42,5 +42,10 @@ namespace EJ7
             return iFabEnc.GetEncriptador(pNombreEncriptador).Desencriptar(pCadena);
         }
 
+        public IList<string> EncriptadoresDisponibles()
+        {
+            return iFabEnc.ObtenerNombresEncriptadores();
+        }
+
     }
 }

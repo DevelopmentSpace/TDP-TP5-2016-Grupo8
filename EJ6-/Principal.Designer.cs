@@ -71,7 +71,6 @@
             this.label1.Size = new System.Drawing.Size(148, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Banco Triunfante";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -213,7 +212,6 @@
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Debitaciones";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // acreditaciones
             // 

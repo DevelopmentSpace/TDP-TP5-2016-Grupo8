@@ -40,16 +40,10 @@
             // 
             // listaEncriptadores
             // 
-            this.listaEncriptadores.Items.AddRange(new object[] {
-            "Clasico",
-            "AES",
-            "César",
-            "Nulo"});
             this.listaEncriptadores.Location = new System.Drawing.Point(131, 167);
             this.listaEncriptadores.Name = "listaEncriptadores";
             this.listaEncriptadores.Size = new System.Drawing.Size(121, 21);
             this.listaEncriptadores.TabIndex = 0;
-            this.listaEncriptadores.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textoSinEncriptar
             // 
@@ -106,7 +100,6 @@
             this.OpcionEncriptar.TabStop = true;
             this.OpcionEncriptar.Text = "Encriptar";
             this.OpcionEncriptar.UseVisualStyleBackColor = true;
-            this.OpcionEncriptar.CheckedChanged += new System.EventHandler(this.OpcionEncriptar_CheckedChanged);
             // 
             // OpcionDescencriptar
             // 
@@ -118,7 +111,6 @@
             this.OpcionDescencriptar.TabStop = true;
             this.OpcionDescencriptar.Text = "Descencriptar";
             this.OpcionDescencriptar.UseVisualStyleBackColor = true;
-            this.OpcionDescencriptar.CheckedChanged += new System.EventHandler(this.OpcionDescencriptar_CheckedChanged);
             // 
             // Principal
             // 

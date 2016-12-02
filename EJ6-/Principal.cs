@@ -20,11 +20,6 @@ namespace EJ6_
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             //Carga el programa, crea un administrador de cuentas junto con su cliente.
@@ -49,6 +44,7 @@ namespace EJ6_
             float saldotransferir;
             float.TryParse(MontoAUsar.Text, out saldotransferir);
 
+            //Intenta transferir el dinero y si no es posible muestra el error
             try
             {
                 administrador.TransferirACuentaCorriente(saldotransferir);
@@ -75,6 +71,7 @@ namespace EJ6_
             float saldotransferir;
             float.TryParse(MontoAUsar.Text, out saldotransferir);
 
+            //Intenta transferir el dinero y si no es posible muestra el error
             try
             {
                 administrador.TransferirACajaAhorro(saldotransferir);
@@ -96,21 +93,13 @@ namespace EJ6_
 
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
 
         private void debitarCajaAhorro_Click(object sender, EventArgs e)
         {
             float montoADebitar;
             float.TryParse(MontoAUsar.Text, out montoADebitar);
 
+            //Intenta debitar el dinero y si no es posible muestra el error
             try
             {
                 administrador.CajaDeAhorro.DebitarSaldo(montoADebitar);
@@ -136,6 +125,7 @@ namespace EJ6_
             float montoADebitar;
             float.TryParse(MontoAUsar.Text, out montoADebitar);
 
+            //Intenta debitar el dinero y si no es posible muestra el error
             try
             {
                 administrador.CuentaCorriente.DebitarSaldo(montoADebitar);
@@ -156,11 +146,13 @@ namespace EJ6_
             this.actualizarPantalla();
         }
 
+
         private void acreditarCajaAhorro_Click(object sender, EventArgs e)
         {
             float montoADebitar;
             float.TryParse(MontoAUsar.Text, out montoADebitar);
 
+            //Intenta acreditar el dinero y si no es posible muestra el error
             try
             {
                 administrador.CajaDeAhorro.AcreditarSaldo(montoADebitar);
@@ -187,6 +179,7 @@ namespace EJ6_
                 float montoADebitar;
                 float.TryParse(MontoAUsar.Text, out montoADebitar);
 
+                //Intenta acreditar el dinero y si no es posible muestra el error
                 try
                 {
                     administrador.CuentaCorriente.AcreditarSaldo(montoADebitar);

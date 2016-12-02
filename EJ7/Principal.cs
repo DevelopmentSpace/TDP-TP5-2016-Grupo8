@@ -20,9 +20,10 @@ namespace EJ7
             InitializeComponent();
         }
 
+
         private void Calcular_Click(object sender, EventArgs e)
         {
-
+            //Operamos en base a si se quiere encriptar o desencriptar
             if (OpcionEncriptar.Checked)
             {
                     textoEncriptado.Text = criptografia.Encriptar(textoSinEncriptar.Text, listaEncriptadores.Text);
@@ -33,7 +34,7 @@ namespace EJ7
                 {
                     textoSinEncriptar.Text = criptografia.Desencriptar(textoEncriptado.Text, listaEncriptadores.Text);
                 }
-                catch (Exception)
+                catch (Exception) //si no se puede muestra un error
                 {
                     MessageBox.Show("El texto ingresado no se puede descencriptar.","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -45,20 +46,19 @@ namespace EJ7
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //crea la fachada
             criptografia = new Criptografia();
+
+            //obtiene los encriptadores disponibles
+            IEnumerator<string> enumerador = criptografia.EncriptadoresDisponibles().GetEnumerator();
+
+
+            //Actualiza la lista de los encriptadores disponibles
+            listaEncriptadores.Items.Clear();
+
+            while (enumerador.MoveNext())
+                listaEncriptadores.Items.Add(enumerador.Current);
         }
 
-        private void OpcionEncriptar_CheckedChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void OpcionDescencriptar_CheckedChanged(object sender, EventArgs e)
-        {
-        }
     }
 }

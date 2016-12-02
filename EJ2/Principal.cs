@@ -19,7 +19,7 @@ namespace EJ2
 
         private void Click_Verificar(object sender, EventArgs e)
         {
-            
+            //Muestra si estan checkeado los RadioButton y los Checkbox
             MessageBox.Show("Estado de los mensajes  : " + 
                 RadioBoton1.Text + ": " + RadioBoton1.Checked + " - " +
                 RadioBoton2.Text + ": " + RadioBoton2.Checked + " - " +
@@ -28,29 +28,5 @@ namespace EJ2
                 Caja2.Text + ": " + Caja2.Checked);
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

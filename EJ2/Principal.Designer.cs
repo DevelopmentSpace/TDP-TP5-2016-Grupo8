@@ -46,7 +46,6 @@
             this.RadioBoton1.TabStop = true;
             this.RadioBoton1.Text = "Opcion1";
             this.RadioBoton1.UseVisualStyleBackColor = true;
-            this.RadioBoton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // RadioBoton2
             // 
@@ -58,7 +57,6 @@
             this.RadioBoton2.TabStop = true;
             this.RadioBoton2.Text = "Opcion2";
             this.RadioBoton2.UseVisualStyleBackColor = true;
-            this.RadioBoton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // RadioBoton3
             // 
@@ -70,7 +68,6 @@
             this.RadioBoton3.TabStop = true;
             this.RadioBoton3.Text = "Opcion3";
             this.RadioBoton3.UseVisualStyleBackColor = true;
-            this.RadioBoton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // Caja1
             // 
@@ -81,7 +78,6 @@
             this.Caja1.TabIndex = 3;
             this.Caja1.Text = "Caja1";
             this.Caja1.UseVisualStyleBackColor = true;
-            this.Caja1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Caja2
             // 
@@ -92,7 +88,6 @@
             this.Caja2.TabIndex = 4;
             this.Caja2.Text = "Caja2";
             this.Caja2.UseVisualStyleBackColor = true;
-            this.Caja2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // Verificar
             // 
@@ -104,18 +99,18 @@
             this.Verificar.UseVisualStyleBackColor = true;
             this.Verificar.Click += new System.EventHandler(this.Click_Verificar);
             // 
-            // Form1
+            // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 225);
+            this.ClientSize = new System.Drawing.Size(324, 225);
             this.Controls.Add(this.Verificar);
             this.Controls.Add(this.Caja2);
             this.Controls.Add(this.Caja1);
             this.Controls.Add(this.RadioBoton3);
             this.Controls.Add(this.RadioBoton2);
             this.Controls.Add(this.RadioBoton1);
-            this.Name = "Form1";
+            this.Name = "Principal";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

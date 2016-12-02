@@ -194,11 +194,6 @@ namespace EJ8
             }
         }
 
-        private void ascendenteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Principal_Load(object sender, EventArgs e)
         {
             repositorio = new FachadaRepositorio();
