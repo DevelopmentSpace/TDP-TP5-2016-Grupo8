@@ -17,6 +17,9 @@ namespace EJ8
             InitializeComponent();
         }
 
+        // -- Accion de los botones -- //
+
+        //Cuando se presiona aceptar, segun el nombre de la pantalla se toman acciones distintas.
         private void AceptarAccion_Click(object sender, EventArgs e)
         {
             switch (Text)
@@ -49,7 +52,7 @@ namespace EJ8
             this.Close();
         }
 
-        //Al cargar segun el tipo, habilita los botones necesarios
+        //Al cargar segun el nombre de la pantalla, habilita los botones necesarios.
         private void PantallaUsuario_Load(object sender, EventArgs e)
         {
             switch (Text)
@@ -79,7 +82,7 @@ namespace EJ8
 
         }
 
-        //Cada vez que se sale del texto para elegir codigo ejecuta esto.
+        //En caso de eliminar o modificar un usuario cada vez que se ingresa un codigo y se sale del texto se ejecuta la busqueda y se muestra el usuario en pantalla.
         private void codigoUsuario_Leave(object sender, EventArgs e)
         {
             if (Text == "Eliminar usuario" || Text == "Modificar usuario")
@@ -96,11 +99,6 @@ namespace EJ8
                     this.Close();
                 }
             }
-        }
-
-        private void codigoUsuario_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

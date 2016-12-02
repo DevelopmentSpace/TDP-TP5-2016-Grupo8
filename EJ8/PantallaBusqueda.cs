@@ -60,14 +60,17 @@ namespace EJ8
 
         }
 
-        private void resultadoBusqueda_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-           
-        }
-
+        //Segun el nombre de la pantalla, se cambia el nombre de la label tipo de busqueda.
         private void PantallaBusqueda_Load(object sender, EventArgs e)
         {
-
+            if (this.Text == "Buscar codigo")
+            {
+                TipoBusqueda.Text = "por codigo unico de usuario";
+            }
+            else
+            {
+                TipoBusqueda.Text = "por aproximacion de nombre y apellido";
+            }
         }
     }
 }

@@ -71,7 +71,6 @@
             this.resultadoBusqueda.ReadOnly = true;
             this.resultadoBusqueda.Size = new System.Drawing.Size(343, 135);
             this.resultadoBusqueda.TabIndex = 2;
-            this.resultadoBusqueda.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.resultadoBusqueda_CellFormatting);
             // 
             // ColumnaCodigo
             // 

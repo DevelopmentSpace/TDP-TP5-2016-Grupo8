@@ -24,6 +24,7 @@ namespace EJ8
             {
                 case "Listar usuarios":
                     {
+                        TipoListado.Text = "Todos los usuarios";
                         IList<Dictionary<string, string>> listaUsuario = ((Principal)this.MdiParent).obtenerTodos();
                         foreach (var usuario in listaUsuario)
                         {
@@ -34,6 +35,7 @@ namespace EJ8
                     }
                 case "Listar usuarios ordenados ascendentes":
                     {
+                        TipoListado.Text = "Segun nombre ascendente.";
                         IList<Dictionary<string, string>> listaUsuario = ((Principal)this.MdiParent).obtenerOrdenadosPor("");
                         foreach (var usuario in listaUsuario)
                         {
@@ -43,6 +45,7 @@ namespace EJ8
                         }
                 case "Listar usuarios ordenados descendentes":
                     {
+                        TipoListado.Text = "Segun nombre descendente";
                         IList<Dictionary<string, string>> listaUsuario = ((Principal)this.MdiParent).obtenerOrdenadosPor("NombreDescendente");
                         foreach (var usuario in listaUsuario)
                         {
@@ -52,6 +55,7 @@ namespace EJ8
                         }
                 case "Listar usuarios ordenados por correo descendente":
                     {
+                        TipoListado.Text = "Segun correo electronico descendente";
                         IList<Dictionary<string, string>> listaUsuario = ((Principal)this.MdiParent).obtenerOrdenadosPor("CorreoDescendente");
                         foreach (var usuario in listaUsuario)
                         {

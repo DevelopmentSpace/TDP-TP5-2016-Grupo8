@@ -13,17 +13,29 @@ namespace EJ8
     {
         IList<Usuario> iUsuarios = new List<Usuario> { };
 
+        /// <summary>
+        /// Agrega un usuario al repositorios
+        /// </summary>
+        /// <param name="pUsuario">Usuario a agregar</param>
         public void Agregar(Usuario pUsuario)
         {
             iUsuarios.Add(pUsuario);
         }
 
+        /// <summary>
+        /// Actualizar un usuario del repositorio
+        /// </summary>
+        /// <param name="pUsuario">Usuario actualizado</param>
         public void Actualizar(Usuario pUsuario)
         {
             iUsuarios.Remove(pUsuario);
             iUsuarios.Add(pUsuario);
         }
 
+        /// <summary>
+        /// Elimina un usuario
+        /// </summary>
+        /// <param name="pCodigo">Codigo del usuario</param>
         public void Eliminar(string pCodigo)
         {
             Usuario unUsuario = new Usuario();
@@ -31,12 +43,21 @@ namespace EJ8
             if (!iUsuarios.Remove(unUsuario))
                 throw new KeyNotFoundException();
         }
-
+        
+        /// <summary>
+        /// Obtiene todas las cuentas en el repositorio
+        /// </summary>
+        /// <returns>Lista con todos los usuarios</returns>
         public IList<Usuario> ObtenerTodos()
         {
             return iUsuarios;
         }
 
+        /// <summary>
+        /// Obtiene por codigo un usuario
+        /// </summary>
+        /// <param name="pCodigo">Codigo del usuario</param>
+        /// <returns>Usuario encontrado</returns>
         public Usuario ObtenerPorCodigo(string pCodigo)
         {
             Usuario unUsuario = new Usuario();
@@ -44,11 +65,21 @@ namespace EJ8
             return iUsuarios.ElementAt(iUsuarios.IndexOf(unUsuario));
         }
 
+        /// <summary>
+        /// Obtiene todos los usuarios ordenados segun un comparador.
+        /// </summary>
+        /// <param name="pComparador">Comparador con el que se hara la busqueda</param>
+        /// <returns>Lista ordenada segun el comparador</returns>
         public IList<Usuario> ObtenerOrdenadosPor(IComparer<Usuario> pComparador)
         {
             return iUsuarios.OrderBy( unUsuario => unUsuario ,pComparador).ToList();
         }
 
+        /// <summary>
+        /// Obtiene todos los usuarios que se aproximen a una cadena.
+        /// </summary>
+        /// <param name="pNombreCompleto">Nombre y apellido a aproximarse</param>
+        /// <returns>Lista con todos los usuarios que se aproximan</returns>
         public IList<Usuario> ObtenerPorAproximacion(string pNombreCompleto)
         {
             List<Usuario> listaAprox = new List<Usuario> { };
@@ -66,6 +97,11 @@ namespace EJ8
             return listaAprox;
 
         }
+
+        /// <summary>
+        /// Obtiene el ultimo codigo del usuario.
+        /// </summary>
+        /// <returns>Codigo del ultimo usuario, mas 1.</returns>
         public int ultimoCodigo()
         {
             if (iUsuarios.Count() == 0)
@@ -83,7 +119,9 @@ namespace EJ8
     }
 
 
-
+    /// <summary>
+    /// Clase para ordenar usuarios por nombre descendiente.
+    /// </summary>
     public class OrdenarPorNombreDesc : IComparer<Usuario>
     {
         public int Compare(Usuario x, Usuario y)
@@ -92,6 +130,9 @@ namespace EJ8
         }
     }
 
+    /// <summary>
+    /// Clase para ordenar usuarios por nombre ascendiente.
+    /// </summary>
     public class OrdenarPorNombreAsc : IComparer<Usuario>
     {
         public int Compare(Usuario x, Usuario y)
@@ -100,6 +141,9 @@ namespace EJ8
         }
     }
 
+    /// <summary>
+    /// Clase para ordenar usuarios por correo electronico.
+    /// </summary>
     public class OrdenarPorCorreoElectronicoDesc : IComparer<Usuario>
     {
         public int Compare(Usuario x, Usuario y)

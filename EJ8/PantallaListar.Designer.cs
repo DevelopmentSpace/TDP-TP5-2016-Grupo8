@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.TipoListado = new System.Windows.Forms.Label();
             this.usuariosEncontrados = new System.Windows.Forms.DataGridView();
             this.columnaCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,14 +46,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tipo de listado:";
             // 
-            // label2
+            // TipoListado
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(125, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Tipo de listado";
+            this.TipoListado.AutoSize = true;
+            this.TipoListado.Location = new System.Drawing.Point(125, 42);
+            this.TipoListado.Name = "TipoListado";
+            this.TipoListado.Size = new System.Drawing.Size(76, 13);
+            this.TipoListado.TabIndex = 1;
+            this.TipoListado.Text = "Tipo de listado";
             // 
             // usuariosEncontrados
             // 
@@ -74,16 +74,19 @@
             // 
             this.columnaCodigo.HeaderText = "Codigo";
             this.columnaCodigo.Name = "columnaCodigo";
+            this.columnaCodigo.ReadOnly = true;
             // 
             // columnaNombre
             // 
             this.columnaNombre.HeaderText = "Nombre";
             this.columnaNombre.Name = "columnaNombre";
+            this.columnaNombre.ReadOnly = true;
             // 
             // columnaCorreo
             // 
             this.columnaCorreo.HeaderText = "Correo electronico";
             this.columnaCorreo.Name = "columnaCorreo";
+            this.columnaCorreo.ReadOnly = true;
             // 
             // PantallaListar
             // 
@@ -91,7 +94,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 304);
             this.Controls.Add(this.usuariosEncontrados);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.TipoListado);
             this.Controls.Add(this.label1);
             this.Name = "PantallaListar";
             this.Text = "Listar";
@@ -105,7 +108,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label TipoListado;
         private System.Windows.Forms.DataGridView usuariosEncontrados;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnaCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnaNombre;
